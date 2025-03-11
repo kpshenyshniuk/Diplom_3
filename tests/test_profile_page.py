@@ -1,6 +1,4 @@
 import time
-
-from selenium.webdriver.chrome import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
@@ -13,14 +11,15 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 
 class TestGetPages:
-    def test_get_profile_page(self, driver):
+    def test_get_profile_page(self, driver, create_user):
+        user_data, password = create_user
         driver.get(Links.link_login_page)
         WebDriverWait(driver, 10).until(
             expected_conditions.element_to_be_clickable((By.XPATH, Locators.email_field_login_page)))
         driver.find_element(By.XPATH, Locators.email_field_login_page).send_keys(
-            CommonData.valid_email)
+            user_data['user']['email'])
         driver.find_element(By.XPATH, Locators.password_field_login_page).send_keys(
-            CommonData.valid_password)
+            password)
         WebDriverWait(driver, 10).until(
             expected_conditions.visibility_of_element_located((By.XPATH, Locators.login_button_login_page)))
         driver.find_element(By.XPATH, Locators.login_button_login_page).click()
@@ -31,7 +30,7 @@ class TestGetPages:
             (By.XPATH, Locators.exit_button_profile_page)))
         email_field_value = driver.find_element(By.XPATH, Locators.email_field_profile_page).get_attribute(
             'value')
-        assert email_field_value == CommonData.valid_email
+        assert email_field_value == user_data['user']['email']
         assert driver.current_url == Links.full_link_profile_page
 
     def test_get_order_history_page(self, driver):

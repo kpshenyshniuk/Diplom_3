@@ -13,5 +13,5 @@ class CommonData:
     cohort_number = random.randint(1900, 2100)  # Номер когорты (например, 1999)
     random_digits = ''.join(random.choices(string.digits, k=3))  # 3 случайные цифры
     domain = random.choice(["yandex.ru", "gmail.com", "mail.ru"])  # Случайный домен из списка
-    random_email = f"{first_name}_{last_name}_{cohort_number}_{random_digits}@{domain}"
+    random_email = f"{first_name}@{domain}"
 

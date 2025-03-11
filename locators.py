@@ -26,4 +26,6 @@ class Locators:
     div_drag_and_drop_constructor = '//*[@id="root"]/div/main/section[2]/ul/li[1]/div/span/span[1]'
     button_close_popup = '//*[@id="root"]/div/section/div[1]/button'
     button_order_history = '//*[@id="root"]/div/main/div/nav/ul/li[2]/a'
-
+    button_restore_password = '//*[@id="root"]/div/main/div/div/p[2]/a'
+    header_restore_password = '//*[@id="root"]/div/main/div/h2'
+    input_email_field = '//*[@id="root"]/div/main/div/form/fieldset/div/div/input'
