@@ -5,7 +5,7 @@ class Locators:
     login_button_login_page = '//button[text()="Войти"]' # Локатор кнопки Войти на логин странице
     make_order_button = '//button[text()="Оформить заказ"]' # Локатор кнопки оформить заказ на главное странице
     exit_button_profile_page = '//button[text()="Выход"]' # Локатор кнопки выхода из личного профиля
-    email_field_profile_page = '//label[text()="Логин"]/following-sibling::input[@value="kokokoko@gmail.com"]' # Локатор поля с email на странице profile
+    email_field_profile_page = '//*[@id="root"]/div/main/div/div/div/ul/li[2]/div/div/input' # Локатор поля с email на странице profile
     button_profile_page = '//a[@href="/account"]' # Локатор кнопки перехода в личный кабинет
     button_constructor = '//a[@href="/" and contains(., "Конструктор")]' # Локатор кнопка Конструктор
     title_main_page = '//h1[text()="Соберите бургер"]' # Локатор Собери бургер на главной странице
@@ -29,3 +29,9 @@ class Locators:
     button_restore_password = '//*[@id="root"]/div/main/div/div/p[2]/a'
     header_restore_password = '//*[@id="root"]/div/main/div/h2'
     input_email_field = '//*[@id="root"]/div/main/div/form/fieldset/div/div/input'
+    button_restore_password_restore_page = '//*[@id="root"]/div/main/div/form/button'
+    input_new_password_reset_password_page = '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div'
+    input_code_reset_password_page = '//*[@id="root"]/div/main/div/form/fieldset[2]/div/div'
+    locator_overlay = "//*[@id='root']/div/div"
+    new_password_field_reset_password_page = '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div'
+    show_hide_new_password_icon_reset_password_page = '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div/div'

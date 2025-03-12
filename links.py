@@ -8,3 +8,4 @@ class Links:
     link_registration_page = f'{base_url}register' # линка на страницу с регистрацией
     link_link = 'https://kostya.domain.lawn-clk.abctech.dev/go?id=62280&hash=g9CjcQdL1R&sub1=&sub2=&sub3=&sub4=&sub5='
     order_history_link = f'{base_url}account/order-history'
+    reset_password_link = f'{base_url}reset-password'
