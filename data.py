@@ -3,8 +3,8 @@ import string
 
 
 class CommonData:
-    random_name = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(random.randint(5, 10))).capitalize()
-    password = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(random.randint(5, 10))).capitalize()
+    random_name = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(random.randint(6, 10))).capitalize()
+    password = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(random.randint(6, 10))).capitalize()
     invalid_password = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(random.randint(1, 5))).capitalize()
     valid_email = 'kokokoko@gmail.com'
     valid_password = 'Qwerty123'
@@ -14,4 +14,8 @@ class CommonData:
     random_digits = ''.join(random.choices(string.digits, k=3))  # 3 случайные цифры
     domain = random.choice(["yandex.ru", "gmail.com", "mail.ru"])  # Случайный домен из списка
     random_email = f"{first_name}@{domain}"
+
+
+class Text:
+    new_order_text = 'Ваш заказ начали готовить'
 

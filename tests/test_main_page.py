@@ -1,10 +1,8 @@
-import time
-
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from data import CommonData
+from data import CommonData, Text
 from conftest import driver
 from locators import LocatorsLoginPage, LocatorsMainPage, LocatorsProfilePage, FeedPage
 from links import Links
@@ -17,9 +15,8 @@ class TestMainPage:
         WebDriverWait(driver, 10).until(
             lambda d: d.execute_script("return document.readyState") == "complete")
         url_before = driver.current_url
-        button = WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsMainPage.button_constructor)))
-        button.click()
+        WebDriverWait(driver, 10).until(
+            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsMainPage.button_constructor))).click()
         WebDriverWait(driver, 10).until(
             expected_conditions.visibility_of_element_located((By.XPATH, LocatorsMainPage.title_main_page))
         )
@@ -95,7 +92,29 @@ class TestMainPage:
 
         assert int(counter_after) == int(counter_before) + 2
 
+    def test_user_can_make_order(self, driver, create_user):
+        user_data, password = create_user
+        driver.get(Links.link_login_page)
+        WebDriverWait(driver, 10).until(
+            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsLoginPage.email_field_login_page)))
+        driver.find_element(By.XPATH, LocatorsLoginPage.email_field_login_page).send_keys(
+            user_data['user']['email'])
+        driver.find_element(By.XPATH, LocatorsLoginPage.password_field_login_page).send_keys(
+            password)
+        WebDriverWait(driver, 10).until(
+            expected_conditions.visibility_of_element_located(
+                (By.XPATH, LocatorsLoginPage.login_button_login_page))).click()
+        WebDriverWait(driver, 10).until(
+            expected_conditions.visibility_of_element_located((By.XPATH, LocatorsMainPage.make_order_button)))
+        source = driver.find_element(By.XPATH, LocatorsMainPage.div_first_bread_in_bread_section)
+        target = driver.find_element(By.XPATH, LocatorsMainPage.div_drag_and_drop_constructor)
+        actions = ActionChains(driver)
+        actions.drag_and_drop(source, target).perform()
+        WebDriverWait(driver, 10).until(expected_conditions.text_to_be_present_in_element((By.XPATH, LocatorsMainPage.div_drag_and_drop_constructor), "Флюоресцентная булка R2-D3 (верх)"))
+        WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable((By.XPATH, LocatorsMainPage.make_order_button))).click()
+        WebDriverWait(driver, 10).until(lambda d: "opened" not in d.find_element(By.XPATH, LocatorsMainPage.overlay_make_order).get_attribute("class"))
+        WebDriverWait(driver, 10).until(lambda d: "opened" in d.find_element(By.XPATH,LocatorsMainPage.ordered_details_screen).get_attribute("class"))
+        order_number = driver.find_element(By.XPATH, LocatorsMainPage.new_order_number).text
 
-
-
-
+        assert order_number.isdigit() and len(order_number) == 6
+        assert driver.find_element(By.XPATH, LocatorsMainPage.new_order_text).text == Text.new_order_text

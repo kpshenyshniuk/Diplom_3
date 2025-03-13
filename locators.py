@@ -55,7 +55,10 @@ class LocatorsMainPage:
     first_indegridient_name = '//*[@id="root"]/div/main/section[1]/div[2]/ul[1]/a[1]/p'
     close_details_section_button = '//*[@id="root"]/div/section[1]/div[1]/button'
     counter_of_first_bread = '//*[@id="root"]/div/main/section[1]/div[2]/ul[1]/a[1]/div[1]/p'
-
+    overlay_make_order = '//*[@id="root"]/div/div'
+    ordered_details_screen = '//*[@id="root"]/div/section'
+    new_order_number = '//*[@id="root"]/div/section/div[1]/div/h2'
+    new_order_text = '//*[@id="root"]/div/section/div[1]/div/div[2]/p[1]'
 
 class FeedPage:
     header = '//*[@id="root"]/div/main/div/h1'
