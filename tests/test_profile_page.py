@@ -9,25 +9,20 @@ from links import Links
 from selenium.webdriver.common.action_chains import ActionChains
 
 
-
 class TestGetPages:
     def test_get_profile_page(self, driver, create_user):
         user_data, password = create_user
         driver.get(Links.link_login_page)
         WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsLoginPage.email_field_login_page)))
-        driver.find_element(By.XPATH, LocatorsLoginPage.email_field_login_page).send_keys(
-            user_data['user']['email'])
-        driver.find_element(By.XPATH, LocatorsLoginPage.password_field_login_page).send_keys(
-            password)
+            expected_conditions.element_to_be_clickable(LocatorsLoginPage.email_field_login_page))
+        driver.find_element(*LocatorsLoginPage.email_field_login_page).send_keys(user_data['user']['email'])
+        driver.find_element(*LocatorsLoginPage.password_field_login_page).send_keys(password)
+        WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located(LocatorsLoginPage.login_button_login_page)).click()
         WebDriverWait(driver, 10).until(
-            expected_conditions.visibility_of_element_located((By.XPATH, LocatorsLoginPage.login_button_login_page))).click()
-        WebDriverWait(driver, 10).until(
-            expected_conditions.visibility_of_element_located((By.XPATH, LocatorsMainPage.make_order_button)))
+            expected_conditions.visibility_of_element_located(LocatorsMainPage.make_order_button))
         driver.get(Links.link_profile_page)
-        WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located(
-            (By.XPATH, LocatorsProfilePage.exit_button_profile_page)))
-        email_field_value = driver.find_element(By.XPATH, LocatorsProfilePage.email_field_profile_page).get_attribute(
+        WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located(LocatorsProfilePage.exit_button_profile_page))
+        email_field_value = driver.find_element(*LocatorsProfilePage.email_field_profile_page).get_attribute(
             'value')
         assert email_field_value == user_data['user']['email']
         assert driver.current_url == Links.full_link_profile_page
@@ -35,41 +30,39 @@ class TestGetPages:
     def test_get_order_history_page(self, driver):
         driver.get(Links.link_login_page)
         WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsLoginPage.email_field_login_page)))
-        driver.find_element(By.XPATH, LocatorsLoginPage.email_field_login_page).send_keys(
+            expected_conditions.element_to_be_clickable(LocatorsLoginPage.email_field_login_page))
+        driver.find_element(*LocatorsLoginPage.email_field_login_page).send_keys(
             CommonData.valid_email)
-        driver.find_element(By.XPATH, LocatorsLoginPage.password_field_login_page).send_keys(
+        driver.find_element(*LocatorsLoginPage.password_field_login_page).send_keys(
             CommonData.valid_password)
         WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsLoginPage.login_button_login_page))).click()
+            expected_conditions.element_to_be_clickable(LocatorsLoginPage.login_button_login_page)).click()
         WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsProfilePage.button_profile_page))).click()
+            expected_conditions.element_to_be_clickable(LocatorsProfilePage.button_profile_page)).click()
         WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsProfilePage.button_order_history))).click()
+            expected_conditions.element_to_be_clickable(LocatorsProfilePage.button_order_history)).click()
         assert driver.current_url == Links.order_history_link
         WebDriverWait(driver, 10).until(
-            lambda d: "Account_link_active" in d.find_element(By.XPATH, LocatorsProfilePage.button_order_history).get_attribute("class")
-        )
-
+            lambda d: "Account_link_active" in d.find_element(*LocatorsProfilePage.button_order_history).get_attribute("class"))
 
     def test_click_on_logout_button(self, driver):
         driver.get(Links.link_login_page)
         WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsLoginPage.email_field_login_page)))
-        driver.find_element(By.XPATH, LocatorsLoginPage.email_field_login_page).send_keys(
+            expected_conditions.element_to_be_clickable(LocatorsLoginPage.email_field_login_page))
+        driver.find_element(*LocatorsLoginPage.email_field_login_page).send_keys(
             CommonData.valid_email)
-        driver.find_element(By.XPATH, LocatorsLoginPage.password_field_login_page).send_keys(
+        driver.find_element(*LocatorsLoginPage.password_field_login_page).send_keys(
             CommonData.valid_password)
         WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsLoginPage.login_button_login_page))).click()
+            expected_conditions.element_to_be_clickable(LocatorsLoginPage.login_button_login_page)).click()
         WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsProfilePage.button_profile_page))).click()
+            expected_conditions.element_to_be_clickable(LocatorsProfilePage.button_profile_page)).click()
         WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsProfilePage.button_profile_page))).click()
+            expected_conditions.element_to_be_clickable(LocatorsProfilePage.button_profile_page)).click()
         WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((By.XPATH, LocatorsProfilePage.exit_button_profile_page))).click()
+            expected_conditions.element_to_be_clickable(LocatorsProfilePage.exit_button_profile_page)).click()
         WebDriverWait(driver, 10).until(
-            expected_conditions.presence_of_element_located((By.XPATH, LocatorsLoginPage.login_button_login_page)))
+            expected_conditions.presence_of_element_located(LocatorsLoginPage.login_button_login_page))
 
         assert driver.current_url == Links.link_login_page
-        assert driver.find_element(By.XPATH, LocatorsLoginPage.login_button_login_page)
+        assert driver.find_element(*LocatorsLoginPage.login_button_login_page)
