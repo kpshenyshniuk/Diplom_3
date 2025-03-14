@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from data import CommonData, Text
 from conftest import driver
+from helpers import wait_clickable
 from locators import LocatorsLoginPage, LocatorsMainPage, LocatorsProfilePage, FeedPage
 from links import Links
 
@@ -15,8 +16,9 @@ class TestMainPage:
         WebDriverWait(driver, 10).until(
             lambda d: d.execute_script("return document.readyState") == "complete")
         url_before = driver.current_url
-        WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable((LocatorsMainPage.button_constructor))).click()
+        button = wait_clickable(driver, LocatorsMainPage.button_constructor)
+        button.click()
+
         WebDriverWait(driver, 10).until(
             expected_conditions.visibility_of_element_located(LocatorsMainPage.title_main_page)
         )
@@ -31,8 +33,7 @@ class TestMainPage:
         WebDriverWait(driver, 10).until(
             lambda d: d.execute_script("return document.readyState") == "complete")
         url_before = driver.current_url
-        button = WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable(LocatorsMainPage.button_feed))
+        button = wait_clickable(driver, LocatorsMainPage.button_feed)
         button.click()
         WebDriverWait(driver, 10).until(
             expected_conditions.visibility_of_element_located(FeedPage.header)
@@ -49,8 +50,7 @@ class TestMainPage:
         WebDriverWait(driver, 10).until(
             lambda d: d.execute_script("return document.readyState") == "complete")
         indegridient_name = driver.find_element(*LocatorsMainPage.first_indegridient_name).text
-        button = WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable(LocatorsMainPage.div_first_bread_in_bread_section))
+        button = wait_clickable(driver, LocatorsMainPage.div_first_bread_in_bread_section)
         button.click()
         WebDriverWait(driver, 10).until(
             lambda d: "opened" in d.find_element(*LocatorsMainPage.ingredient_detail_section).get_attribute("class"))
@@ -65,8 +65,8 @@ class TestMainPage:
         driver.get(Links.base_url)
         WebDriverWait(driver, 10).until(
             lambda d: d.execute_script("return document.readyState") == "complete")
-        WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable(LocatorsMainPage.div_first_bread_in_bread_section)).click()
+        button = wait_clickable(driver, LocatorsMainPage.div_first_bread_in_bread_section)
+        button.click()
         WebDriverWait(driver, 10).until(
             lambda d: "opened" in d.find_element(*LocatorsMainPage.ingredient_detail_section).get_attribute("class"))
         element = driver.find_element(*LocatorsMainPage.ingredient_detail_header)
@@ -93,8 +93,7 @@ class TestMainPage:
     def test_user_can_make_order(self, driver, create_user):
         user_data, password = create_user
         driver.get(Links.link_login_page)
-        WebDriverWait(driver, 10).until(
-            expected_conditions.element_to_be_clickable(LocatorsLoginPage.email_field_login_page))
+        wait_clickable(driver, LocatorsLoginPage.email_field_login_page)
         driver.find_element(*LocatorsLoginPage.email_field_login_page).send_keys(
             user_data['user']['email'])
         driver.find_element(*LocatorsLoginPage.password_field_login_page).send_keys(
@@ -108,7 +107,8 @@ class TestMainPage:
         actions = ActionChains(driver)
         actions.drag_and_drop(source, target).perform()
         WebDriverWait(driver, 10).until(expected_conditions.text_to_be_present_in_element(LocatorsMainPage.div_drag_and_drop_constructor, "Флюоресцентная булка R2-D3 (верх)"))
-        WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(LocatorsMainPage.make_order_button)).click()
+        button = wait_clickable(driver, LocatorsMainPage.make_order_button)
+        button.click()
         WebDriverWait(driver, 10).until(lambda d: "opened" not in d.find_element(*LocatorsMainPage.overlay_make_order).get_attribute("class"))
         WebDriverWait(driver, 10).until(lambda d: "opened" in d.find_element(*LocatorsMainPage.ordered_details_screen).get_attribute("class"))
         order_number = driver.find_element(*LocatorsMainPage.new_order_number).text
