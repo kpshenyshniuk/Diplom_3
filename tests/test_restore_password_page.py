@@ -1,6 +1,3 @@
-import time
-
-from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from conftest import driver
 from helpers import wait_clickable
@@ -40,7 +37,7 @@ class TestGetPages:
             user_data['user']['email'])
         wait_clickable(driver, LocatorsResetPasswordPage.button_restore_password_restore_page).click()
         WebDriverWait(driver, 10).until(
-            lambda d: "Modal_modal_opened" not in d.find_element(*LocatorsResetPasswordPage.locator_overlay_reset_password_page).get_attribute(
+            lambda d: "opened" not in d.find_element(*LocatorsResetPasswordPage.locator_overlay_reset_password_page).get_attribute(
                 "class"))
         state_before = driver.find_element(*LocatorsResetPasswordPage.new_password_field_reset_password_page).get_attribute("class")
         driver.find_element(*LocatorsResetPasswordPage.show_hide_new_password_icon_reset_password_page).click()

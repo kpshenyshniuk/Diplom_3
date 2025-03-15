@@ -18,4 +18,4 @@ class CommonData:
 
 class Text:
     new_order_text = 'Ваш заказ начали готовить'
-
+    name_first_indegridient = "Флюоресцентная булка R2-D3 (верх)"
