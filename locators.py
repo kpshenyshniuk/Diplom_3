@@ -75,8 +75,8 @@ class LocatorsMainPage:
     new_order_number = (By.XPATH, '//*[@id="root"]/div/section/div[1]/div/h2')
     new_order_text = (By.XPATH, '//*[@id="root"]/div/section/div[1]/div/div[2]/p[1]')
     indegridient_name_details = (By.XPATH, '//*[@id="root"]/div/section[1]/div[1]/div/p')
-    profile_button = (By.XPATH, '//*[@id="root"]/div/header/nav/a')
-
+    profile_button = (By.CSS_SELECTOR, 'a.AppHeader_header__link__3D_hX:nth-child(3)')
+    overlay = (By.XPATH, "//*[contains(@class, 'Modal_modal_overlay')]")
 
 class FeedPage:
     header = (By.XPATH, '//*[@id="root"]/div/main/div/h1')
@@ -88,3 +88,5 @@ class FeedPage:
     count_all_orders = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/div[2]/p[2]')
     count_today_orders = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/div[3]/p[2]')
     order_number_in_work = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/div[1]/ul[2]/li')
+    list_items = (By.XPATH, '//*[@id="root"]/div/main/div/div/ul/li')
+    text_in_list = (By.XPATH, './a/div[1]/p[1]')

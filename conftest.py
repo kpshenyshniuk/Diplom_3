@@ -10,7 +10,7 @@ from links import Links
 @pytest.fixture(scope='function')
 def driver():
     # Открываем браузер
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
     driver.maximize_window()
     driver.implicitly_wait(5)
     yield driver

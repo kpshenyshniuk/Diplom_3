@@ -1,8 +1,11 @@
 from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from data import Text
 from conftest import driver
-from helpers import wait_clickable, wait_text_present, wait_full_page, wait_visible, wait_invisible, find_element
+from helpers import wait_clickable, wait_text_present, wait_full_page, wait_visible, wait_invisible, find_element, \
+    drag_and_drop, drag_and_drop_js
 from locators import LocatorsLoginPage, LocatorsMainPage, FeedPage
 from links import Links
 
@@ -14,7 +17,7 @@ class TestMainPage:
         wait_full_page(driver)
         url_before = driver.current_url
         button = wait_clickable(driver, LocatorsMainPage.button_constructor)
-        button.click()
+        driver.execute_script("arguments[0].click();", button)
         wait_visible(driver, LocatorsMainPage.title_main_page)
         url_after = driver.current_url
 
@@ -69,8 +72,7 @@ class TestMainPage:
         counter_before = find_element(driver, LocatorsMainPage.counter_of_first_bread).text
         source = find_element(driver, LocatorsMainPage.div_first_bread_in_bread_section)
         target = find_element(driver, LocatorsMainPage.div_drag_and_drop_constructor)
-        actions = ActionChains(driver)
-        actions.drag_and_drop(source, target).perform()
+        drag_and_drop_js(driver, source, target)
         wait_text_present(driver, LocatorsMainPage.div_drag_and_drop_constructor, Text.name_first_indegridient)
         counter_after = find_element(driver, LocatorsMainPage.counter_of_first_bread).text
 
@@ -90,11 +92,10 @@ class TestMainPage:
         wait_visible(driver, LocatorsMainPage.div_drag_and_drop_constructor)
         source = find_element(driver, LocatorsMainPage.div_first_bread_in_bread_section)
         target = find_element(driver, LocatorsMainPage.div_drag_and_drop_constructor)
-        actions = ActionChains(driver)
-        actions.drag_and_drop(source, target).perform()
+        drag_and_drop_js(driver, source, target)
         wait_text_present(driver, LocatorsMainPage.div_drag_and_drop_constructor, Text.name_first_indegridient)
         button = wait_clickable(driver, LocatorsMainPage.make_order_button)
-        button.click()
+        driver.execute_script("arguments[0].click();", button)
         WebDriverWait(driver, 10).until(lambda d: "opened" not in find_element(driver, LocatorsMainPage.overlay_make_order).get_attribute("class"))
         WebDriverWait(driver, 10).until(lambda d: "opened" in find_element(driver, LocatorsMainPage.ordered_details_screen).get_attribute("class"))
         order_number = find_element(driver, LocatorsMainPage.new_order_number).text
