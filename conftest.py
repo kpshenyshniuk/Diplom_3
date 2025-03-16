@@ -1,20 +1,21 @@
 import random
 import string
-
 import pytest
 from selenium import webdriver
 import requests
-from  data import CommonData
-from links import Links
+from data import CommonData
+import pytest
+from selenium import webdriver
 
-@pytest.fixture(scope='function')
-def driver():
-    # Открываем браузер
-    driver = webdriver.Firefox()
-    driver.maximize_window()
-    driver.implicitly_wait(5)
+
+@pytest.fixture(params=["chrome", "firefox"])
+def driver(request):
+    if request.param == "chrome":
+        driver = webdriver.Chrome()
+    elif request.param == "firefox":
+        driver = webdriver.Firefox()
+
     yield driver
-    # Закрываем браузер после завершения всех тестов
     driver.quit()
 
 

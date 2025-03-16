@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
@@ -70,8 +72,9 @@ class TestOrderHistoryPage:
         driver.execute_script("arguments[0].click();", button)
         button = wait_clickable(driver, LocatorsProfilePage.button_order_history)
         driver.execute_script("arguments[0].click();", button)
+        WebDriverWait(driver, 10).until(
+            expected_conditions.presence_of_element_located(LocatorsProfilePage.first_order_number))
         order_number_history = find_element(driver, LocatorsProfilePage.first_order_number).text
-        print(order_number_history)
         button = find_element(driver, LocatorsMainPage.button_feed)
         driver.execute_script("arguments[0].click();", button)
         ul_locator = (By.XPATH, '//*[@id="root"]/div/main/div/div/ul')
@@ -117,6 +120,8 @@ class TestOrderHistoryPage:
         button = find_element(driver, LocatorsMainPage.button_close_popup)
         driver.execute_script("arguments[0].click();", button)
         driver.get(Links.feed_page)
+        WebDriverWait(driver, 20).until(
+            lambda d: int(find_element(driver, FeedPage.count_all_orders).text) > int(count_before))
         count_after = wait_visible(driver, FeedPage.count_all_orders).text
 
         assert int(count_before) == int(count_after) - 1
