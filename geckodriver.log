@@ -1,0 +1,221 @@
+1742318604514	geckodriver	INFO	Listening on 127.0.0.1:52629
+1742318605018	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofilevd7GhN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742318606255	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742318606557	Marionette	INFO	Listening on port 52648
+WebDriver BiDi listening on ws://127.0.0.1:52630
+1742318606645	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1742318607488	Marionette	INFO	Stopped listening on port 52648
+console.error: services.settings: 
+  main/tracking-protection-lists: Signature of bundled changeset is invalid: TypeError: NetworkError: Network request failed.
+console.error: services.settings: 
+  main/nimbus-desktop-experiments: Signature of bundled changeset is invalid: [Exception... "<no message>"  nsresult: "0x8046001e (<unknown>)"  location: "JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126"  data: no].
+console.error: services.settings: 
+  main/cfr: Signature of bundled changeset is invalid: [Exception... "<no message>"  nsresult: "0x8046001e (<unknown>)"  location: "JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126"  data: no].
+console.error: services.settings: 
+  main/partitioning-exempt-urls: Signature of bundled changeset is invalid: [Exception... "<no message>"  nsresult: "0x8046001e (<unknown>)"  location: "JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126"  data: no].
+console.error: services.settings: 
+  main/normandy-recipes-capabilities: Signature of bundled changeset is invalid: [Exception... "<no message>"  nsresult: "0x8046001e (<unknown>)"  location: "JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126"  data: no].
+console.error: services.settings: 
+  main/nimbus-secure-experiments: Signature of bundled changeset is invalid: [Exception... "<no message>"  nsresult: "0x8046001e (<unknown>)"  location: "JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126"  data: no].
+console.error: services.settings: 
+  main/newtab-wallpapers-v2: Signature of bundled changeset is invalid: [Exception... "<no message>"  nsresult: "0x8046001e (<unknown>)"  location: "JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126"  data: no].
+console.error: services.settings: 
+  main/search-categorization: Signature of bundled changeset is invalid: [Exception... "<no message>"  nsresult: "0x8046001e (<unknown>)"  location: "JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126"  data: no].
+console.error: services.settings: 
+  main/message-groups: Signature of bundled changeset is invalid: [Exception... "<no message>"  nsresult: "0x8046001e (<unknown>)"  location: "JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126"  data: no].
+console.error: services.settings: 
+  main/fingerprinting-protection-overrides: Signature of bundled changeset is invalid: [Exception... "<no message>"  nsresult: "0x8046001e (<unknown>)"  location: "JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126"  data: no].
+console.error: services.settings: 
+  main/query-stripping: Signature of bundled changeset is invalid: [Exception... "<no message>"  nsresult: "0x8046001e (<unknown>)"  location: "JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126"  data: no].
+console.error: services.settings: 
+Object
+  - prototype Object
+    - columnNumber = 0
+    - data = null
+    - filename = resource://gre/modules/ServiceRequest.sys.mjs
+    - lineNumber = 126
+    - location = {"name":"open","filename":"resource://gre/modules/ServiceRequest.sys.mjs","sourceId":24,"lineNumber":126,"columnNumber":11,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch/<","sourceId":23,"lineNumber":268,"columnNumber":15,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch","sourceId":23,"lineNumber":219,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetchLatestChanges","sourceId":23,"lineNumber":429,"columnNumber":34,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"sync","sourceId":21,"lineNumber":625,"columnNumber":42,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"get/this._importingPromise<","sourceId":21,"lineNumber":477,"columnNumber":28,"asyncCause":null,"asyncCaller":null,"caller":null,"formattedStack":"get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"open@resource://gre/modules/ServiceRequest.sys.mjs:126:11\nfetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}}
+    - message = 
+    - name = 
+    - result = 2152071198
+    - stack = open@resource://gre/modules/ServiceRequest.sys.mjs:126:11|fetch/<@resource://services-settings/Utils.sys.mjs:268:15|fetch@resource://services-settings/Utils.sys.mjs:219:12|fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34|sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42|get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28|
+  - prototype Object
+console.error: services.settings: 
+Object
+  - prototype Object
+    - columnNumber = 0
+    - data = null
+    - filename = resource://gre/modules/ServiceRequest.sys.mjs
+    - lineNumber = 126
+    - location = {"name":"open","filename":"resource://gre/modules/ServiceRequest.sys.mjs","sourceId":24,"lineNumber":126,"columnNumber":11,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch/<","sourceId":23,"lineNumber":268,"columnNumber":15,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch","sourceId":23,"lineNumber":219,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetchLatestChanges","sourceId":23,"lineNumber":429,"columnNumber":34,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"sync","sourceId":21,"lineNumber":625,"columnNumber":42,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"get/this._importingPromise<","sourceId":21,"lineNumber":477,"columnNumber":28,"asyncCause":null,"asyncCaller":null,"caller":null,"formattedStack":"get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"open@resource://gre/modules/ServiceRequest.sys.mjs:126:11\nfetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}}
+    - message = 
+    - name = 
+    - result = 2152071198
+    - stack = open@resource://gre/modules/ServiceRequest.sys.mjs:126:11|fetch/<@resource://services-settings/Utils.sys.mjs:268:15|fetch@resource://services-settings/Utils.sys.mjs:219:12|fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34|sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42|get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28|
+  - prototype Object
+console.error: services.settings: 
+Object
+  - prototype Object
+    - columnNumber = 0
+    - data = null
+    - filename = resource://gre/modules/ServiceRequest.sys.mjs
+    - lineNumber = 126
+    - location = {"name":"open","filename":"resource://gre/modules/ServiceRequest.sys.mjs","sourceId":24,"lineNumber":126,"columnNumber":11,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch/<","sourceId":23,"lineNumber":268,"columnNumber":15,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch","sourceId":23,"lineNumber":219,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetchLatestChanges","sourceId":23,"lineNumber":429,"columnNumber":34,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"sync","sourceId":21,"lineNumber":625,"columnNumber":42,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"get/this._importingPromise<","sourceId":21,"lineNumber":477,"columnNumber":28,"asyncCause":null,"asyncCaller":null,"caller":null,"formattedStack":"get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"open@resource://gre/modules/ServiceRequest.sys.mjs:126:11\nfetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}}
+    - message = 
+    - name = 
+    - result = 2152071198
+    - stack = open@resource://gre/modules/ServiceRequest.sys.mjs:126:11|fetch/<@resource://services-settings/Utils.sys.mjs:268:15|fetch@resource://services-settings/Utils.sys.mjs:219:12|fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34|sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42|get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28|
+  - prototype Object
+console.error: services.settings: 
+Object
+  - prototype Object
+    - columnNumber = 0
+    - data = null
+    - filename = resource://gre/modules/ServiceRequest.sys.mjs
+    - lineNumber = 126
+    - location = {"name":"open","filename":"resource://gre/modules/ServiceRequest.sys.mjs","sourceId":24,"lineNumber":126,"columnNumber":11,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch/<","sourceId":23,"lineNumber":268,"columnNumber":15,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch","sourceId":23,"lineNumber":219,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetchLatestChanges","sourceId":23,"lineNumber":429,"columnNumber":34,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"sync","sourceId":21,"lineNumber":625,"columnNumber":42,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"get/this._importingPromise<","sourceId":21,"lineNumber":477,"columnNumber":28,"asyncCause":null,"asyncCaller":null,"caller":null,"formattedStack":"get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"open@resource://gre/modules/ServiceRequest.sys.mjs:126:11\nfetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}}
+    - message = 
+    - name = 
+    - result = 2152071198
+    - stack = open@resource://gre/modules/ServiceRequest.sys.mjs:126:11|fetch/<@resource://services-settings/Utils.sys.mjs:268:15|fetch@resource://services-settings/Utils.sys.mjs:219:12|fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34|sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42|get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28|
+  - prototype Object
+console.error: services.settings: 
+Object
+  - prototype Object
+    - columnNumber = 0
+    - data = null
+    - filename = resource://gre/modules/ServiceRequest.sys.mjs
+    - lineNumber = 126
+    - location = {"name":"open","filename":"resource://gre/modules/ServiceRequest.sys.mjs","sourceId":24,"lineNumber":126,"columnNumber":11,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch/<","sourceId":23,"lineNumber":268,"columnNumber":15,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch","sourceId":23,"lineNumber":219,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetchLatestChanges","sourceId":23,"lineNumber":429,"columnNumber":34,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"sync","sourceId":21,"lineNumber":625,"columnNumber":42,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"get/this._importingPromise<","sourceId":21,"lineNumber":477,"columnNumber":28,"asyncCause":null,"asyncCaller":null,"caller":null,"formattedStack":"get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"open@resource://gre/modules/ServiceRequest.sys.mjs:126:11\nfetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}}
+    - message = 
+    - name = 
+    - result = 2152071198
+    - stack = open@resource://gre/modules/ServiceRequest.sys.mjs:126:11|fetch/<@resource://services-settings/Utils.sys.mjs:268:15|fetch@resource://services-settings/Utils.sys.mjs:219:12|fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34|sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42|get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28|
+  - prototype Object
+console.error: services.settings: 
+Object
+  - prototype Object
+    - columnNumber = 0
+    - data = null
+    - filename = resource://gre/modules/ServiceRequest.sys.mjs
+    - lineNumber = 126
+    - location = {"name":"open","filename":"resource://gre/modules/ServiceRequest.sys.mjs","sourceId":24,"lineNumber":126,"columnNumber":11,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch/<","sourceId":23,"lineNumber":268,"columnNumber":15,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch","sourceId":23,"lineNumber":219,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetchLatestChanges","sourceId":23,"lineNumber":429,"columnNumber":34,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"sync","sourceId":21,"lineNumber":625,"columnNumber":42,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"get/this._importingPromise<","sourceId":21,"lineNumber":477,"columnNumber":28,"asyncCause":null,"asyncCaller":null,"caller":null,"formattedStack":"get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"fetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}},"formattedStack":"open@resource://gre/modules/ServiceRequest.sys.mjs:126:11\nfetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\nfetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34\nsync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42\nget/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28\n","nativeSavedFrame":{}}
+    - message = 
+    - name = 
+    - result = 2152071198
+    - stack = open@resource://gre/modules/ServiceRequest.sys.mjs:126:11|fetch/<@resource://services-settings/Utils.sys.mjs:268:15|fetch@resource://services-settings/Utils.sys.mjs:219:12|fetchLatestChanges@resource://services-settings/Utils.sys.mjs:429:34|sync@resource://services-settings/RemoteSettingsClient.sys.mjs:625:42|get/this._importingPromise<@resource://services-settings/RemoteSettingsClient.sys.mjs:477:28|
+  - prototype Object
+1742318625570	geckodriver	INFO	Listening on 127.0.0.1:52704
+1742318626083	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofilelsrwmT"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742318626381	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742318626568	Marionette	INFO	Listening on port 52710
+WebDriver BiDi listening on ws://127.0.0.1:52705
+1742318626680	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-18 18:23:46.809 firefox[38080:1659164] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-18 18:23:46.809 firefox[38080:1659164] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1742318628655	Marionette	INFO	Stopped listening on port 52710
+1742320908175	geckodriver	INFO	Listening on 127.0.0.1:53316
+1742320908679	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofile0VJaom"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742320909312	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742320909621	Marionette	INFO	Listening on port 53322
+WebDriver BiDi listening on ws://127.0.0.1:53317
+1742320909716	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-18 19:01:49.896 firefox[39033:1685497] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-18 19:01:49.896 firefox[39033:1685497] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1742320913041	Marionette	INFO	Stopped listening on port 53322
+1742321620591	geckodriver	INFO	Listening on 127.0.0.1:53630
+1742321621099	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileXBFZnT"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742321621827	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742321622102	Marionette	INFO	Listening on port 53636
+WebDriver BiDi listening on ws://127.0.0.1:53631
+1742321622200	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-18 19:13:42.360 firefox[39418:1694759] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-18 19:13:42.360 firefox[39418:1694759] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1742321625147	Marionette	INFO	Stopped listening on port 53636
+1742321982838	geckodriver	INFO	Listening on 127.0.0.1:53792
+1742321983351	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileto5y08"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742321984181	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742321984491	Marionette	INFO	Listening on port 53799
+WebDriver BiDi listening on ws://127.0.0.1:53793
+1742321984611	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-18 19:19:44.782 firefox[39623:1700048] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-18 19:19:44.782 firefox[39623:1700048] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1742321987935	Marionette	INFO	Stopped listening on port 53799
+1742323057106	geckodriver	INFO	Listening on 127.0.0.1:54265
+1742323057611	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileernANh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742323058318	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742323058606	Marionette	INFO	Listening on port 54271
+WebDriver BiDi listening on ws://127.0.0.1:54266
+1742323058700	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-18 19:37:38.891 firefox[40399:1718767] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-18 19:37:38.891 firefox[40399:1718767] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1742323061225	Marionette	INFO	Stopped listening on port 54271
+1742325084955	geckodriver	INFO	Listening on 127.0.0.1:54965
+1742325085465	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofiles8lpSZ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742325086079	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742325086325	Marionette	INFO	Listening on port 54973
+WebDriver BiDi listening on ws://127.0.0.1:54966
+1742325086404	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-18 20:11:26.608 firefox[41413:1745217] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-18 20:11:26.608 firefox[41413:1745217] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+1742325091538	Marionette	INFO	Stopped listening on port 54973
+1742326302610	geckodriver	INFO	Listening on 127.0.0.1:55478
+1742326303117	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileyxksYB"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742326303842	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742326304204	Marionette	INFO	Listening on port 55484
+WebDriver BiDi listening on ws://127.0.0.1:55479
+1742326304305	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-18 20:31:44.424 firefox[42153:1763468] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-18 20:31:44.424 firefox[42153:1763468] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+1742326311008	Marionette	INFO	Stopped listening on port 55484
+1742326353687	geckodriver	INFO	Listening on 127.0.0.1:55573
+1742326354195	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileFCm4Eg"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742326354584	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742326354832	Marionette	INFO	Listening on port 55579
+WebDriver BiDi listening on ws://127.0.0.1:55574
+1742326354929	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-18 20:32:35.094 firefox[42243:1765226] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-18 20:32:35.094 firefox[42243:1765226] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+1742326361582	Marionette	INFO	Stopped listening on port 55579

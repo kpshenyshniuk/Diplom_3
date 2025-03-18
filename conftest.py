@@ -1,8 +1,5 @@
-import random
-import string
-import pytest
-from selenium import webdriver
 import requests
+from urls import Links
 from data import CommonData
 import pytest
 from selenium import webdriver
@@ -25,16 +22,14 @@ def create_user():
     username = CommonData.random_name
     email = CommonData.random_email
     password = CommonData.password
-    response = requests.post('https://stellarburgers.nomoreparties.site/api/auth/register', json={
+    response = requests.post(Links.link_registration_page, json={
         "email": email,
         "password": password,
         "name": username
     })
-
-    assert response.status_code == 200
     user_data = response.json()
 
     yield user_data, password
-    requests.delete("https://stellarburgers.nomoreparties.site/api/auth/user", headers={
+    requests.delete(Links.delete_user_link, headers={
         "Authorization": f"Bearer {user_data['accessToken']}"
     })

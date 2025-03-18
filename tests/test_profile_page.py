@@ -2,7 +2,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from conftest import driver
 from helpers import wait_clickable, wait_present, wait_visible, find_element, wait_invisible
 from locators import LocatorsLoginPage, LocatorsMainPage, LocatorsProfilePage
-from links import Links
+from urls import Links
 
 
 class TestGetPages:
