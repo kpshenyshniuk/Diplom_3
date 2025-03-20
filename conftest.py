@@ -11,6 +11,7 @@ def driver(request):
         driver = webdriver.Chrome()
     elif request.param == "firefox":
         driver = webdriver.Firefox()
+    driver.maximize_window()
 
     yield driver
     driver.quit()

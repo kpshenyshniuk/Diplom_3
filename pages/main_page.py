@@ -1,7 +1,7 @@
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 from data import Text
 from pages.base_page import BasePage
 
@@ -35,6 +35,7 @@ class MainPage(BasePage):
     profile_button = (By.XPATH, '//header//nav//a[@href="/account"]')
     overlay = (By.XPATH, "//*[contains(@class, 'Modal_modal_overlay')]")
 
+    @allure.step("Переносим первый элемент из раздела Булки в конструктор заказа")
     def drag_and_drop_js(self, source, target):
         js_code = """
             function simulateDragDrop(sourceNode, destinationNode) {
@@ -54,6 +55,7 @@ class MainPage(BasePage):
         """
         self.driver.execute_script(js_code, source, target)
 
+    @allure.step("Делаем заказ")
     def make_order(self):
         WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, '//h2[text()="Булки"]/following-sibling::ul[1]//a[1]')))
@@ -73,3 +75,5 @@ class MainPage(BasePage):
             lambda d: "opened" not in self.driver.find_element(*self.overlay_make_order).get_attribute("class"))
         WebDriverWait(self.driver, 10).until(
             lambda d: "opened" in self.driver.find_element(*self.ordered_details_screen).get_attribute("class"))
+        WebDriverWait(self.driver, 20).until(
+            lambda d: len(d.find_element(*self.new_order_number).text) == 6)
