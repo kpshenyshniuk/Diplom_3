@@ -19,10 +19,14 @@ class BasePage:
         """Ищет элемент на странице"""
         return self.wait.until(EC.presence_of_element_located(locator))
 
+    def find_elements(self, locator):
+        """Ищет список элементов на странице"""
+        return self.wait.until(EC.visibility_of_all_elements_located(locator))
+
     def click(self, locator):
         """Кликает по элементу"""
-        self.find_element(locator).click()
-
+        element = self.find_element(locator)
+        self.driver.execute_script("arguments[0].click();", element)
     def send_keys(self, locator, text):
         """Вводит текст в поле"""
         element = self.find_element(locator)

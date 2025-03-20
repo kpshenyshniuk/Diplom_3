@@ -8,4 +8,3 @@ class ProfilePage(BasePage):
     button_profile_page = (By.XPATH, '//a[@href="/account"]')  # Локатор кнопки перехода в личный кабинет
     button_order_history = (By.XPATH, '//*[@id="root"]/div/main/div/nav/ul/li[2]/a')
     first_order_number = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/ul/li[1]/a/div[1]/p[1]')
-

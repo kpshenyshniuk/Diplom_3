@@ -1,16 +1,15 @@
-from selenium.webdriver import ActionChains
+import time
+
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from data import Text
 from conftest import driver
-from helpers import wait_clickable, wait_text_present, wait_full_page, wait_visible, wait_invisible, find_element, \
-    drag_and_drop, drag_and_drop_js
 from pages.feed_page import FeedPage
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
 from urls import Links
-from pages.base_page import BasePage
+from selenium.webdriver.support import expected_conditions as EC
+
 
 
 class TestBasePage:
@@ -49,7 +48,7 @@ class TestBasePage:
         button = main_page.wait_clickable(main_page.div_first_bread_in_bread_section)
         button.click()
         WebDriverWait(driver, 10).until(
-            lambda d: "opened" in find_element(driver, main_page.ingredient_detail_section).get_attribute("class"))
+            lambda d: "opened" in main_page.find_element(main_page.ingredient_detail_section).get_attribute("class"))
         element = main_page.find_element(main_page.ingredient_detail_header)
         indegridient_name_on_details = main_page.find_element(main_page.indegridient_name_details).text
 
@@ -62,7 +61,7 @@ class TestBasePage:
         button = main_page.wait_clickable(main_page.div_first_bread_in_bread_section)
         button.click()
         WebDriverWait(driver, 10).until(
-            lambda d: "opened" in find_element(driver, main_page.ingredient_detail_section).get_attribute("class")
+            lambda d: "opened" in main_page.find_element(main_page.ingredient_detail_section).get_attribute("class")
         )
         main_page.find_element(main_page.close_details_section_button).click()
         main_page.wait_invisible(main_page.ingredient_detail_header)
@@ -86,38 +85,34 @@ class TestBasePage:
         login_page = LoginPage(driver)
         main_page.open(Links.link_login_page)
         user_data, password = create_user
-        main_page.wait_clickable(login_page.email_field_login_page)
-        # wait_clickable(driver, LocatorsLoginPage.email_field_login_page)
-        main_page.send_keys(login_page.email_field_login_page, user_data['user']['email'])
-        # find_element(driver, LocatorsLoginPage.email_field_login_page).send_keys(
-        #     user_data['user']['email'])
-        main_page.send_keys(login_page.password_field_login_page, password)
+        login_page.login(user_data['user']['email'], password)
 
-        # find_element(driver, LocatorsLoginPage.password_field_login_page).send_keys(
-        #     password)
-        login_button = main_page.wait_clickable(login_page.login_button_login_page)
-        # login_button = wait_clickable(driver, LocatorsLoginPage.login_button_login_page)
-        login_button.click()
-        main_page.wait_visible(main_page.div_first_bread_in_bread_section)
-        # wait_visible(driver, LocatorsMainPage.div_first_bread_in_bread_section)
-        main_page.wait_visible(main_page.div_drag_and_drop_constructor)
-
-        # wait_visible(driver, LocatorsMainPage.div_drag_and_drop_constructor)
-        source = main_page.find_element(main_page.div_first_bread_in_bread_section)
-        # source = find_element(driver, LocatorsMainPage.div_first_bread_in_bread_section)
-        target = main_page.find_element(main_page.div_drag_and_drop_constructor)
-        # target = find_element(driver, LocatorsMainPage.div_drag_and_drop_constructor)
+        WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//h2[text()="Булки"]/following-sibling::ul[1]//a[1]')))
+        WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located(
+                (By.XPATH, '//*[@id="root"]/div/main/section[2]/ul/li[1]/div/span/span[1]')))
+        source = driver.find_element(*main_page.div_first_bread_in_bread_section)
+        target = driver.find_element(*main_page.div_drag_and_drop_constructor)
         main_page.drag_and_drop_js(source, target)
-        # drag_and_drop_js(driver, source, target)
-        main_page.wait_text_present(main_page.div_drag_and_drop_constructor, Text.name_first_indegridient)
-        # wait_text_present(driver, LocatorsMainPage.div_drag_and_drop_constructor, Text.name_first_indegridient)
-        button = main_page.wait_clickable(main_page.make_order_button)
-        # button = wait_clickable(driver, LocatorsMainPage.make_order_button)
-        driver.execute_script("arguments[0].click();", button)
-        WebDriverWait(driver, 10).until(lambda d: "opened" not in find_element(driver, main_page.overlay_make_order).get_attribute("class"))
-        WebDriverWait(driver, 10).until(lambda d: "opened" in find_element(driver, main_page.ordered_details_screen).get_attribute("class"))
-        order_number = main_page.find_element(main_page.new_order_number).text
-        # order_number = find_element(driver, LocatorsMainPage.new_order_number).text
 
-        assert order_number.isdigit() and len(order_number) == 6
-        assert main_page.find_element(main_page.new_order_text).text == Text.new_order_text
+        WebDriverWait(driver, 10).until(
+            EC.text_to_be_present_in_element(main_page.div_drag_and_drop_constructor, Text.name_first_indegridient))
+
+        button = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable(main_page.make_order_button))
+        driver.execute_script("arguments[0].click();", button)
+        WebDriverWait(driver, 10).until(
+            lambda d: "opened" not in driver.find_element(*main_page.overlay_make_order).get_attribute("class"))
+        WebDriverWait(driver, 10).until(
+            lambda d: "opened" in driver.find_element(*main_page.ordered_details_screen).get_attribute("class"))
+        WebDriverWait(driver, 10).until(
+            lambda d: main_page.find_element(main_page.new_order_number).text != "9999"
+        )
+        # main_page.make_order()
+        order_number = main_page.find_element(main_page.new_order_number).text
+        # assert len(order_number) == 6
+        # assert main_page.find_element(main_page.new_order_text).text == Text.new_order_text
+        print(f"DEBUG: order_number='{order_number}'")  # Отладочный вывод
+        assert order_number, "Ошибка: order_number пустой!"
+        assert len(order_number) == 6

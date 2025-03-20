@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
 
-class RegistrationPage(BasePage):
+class ResetPasswordPage(BasePage):
     input_new_password_reset_password_page = (By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div')
     input_code_reset_password_page = (By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[2]/div/div')
     locator_overlay_reset_password_page = (By.XPATH, "//*[@id='root']/div/div")

@@ -4,20 +4,15 @@ from pages.base_page import BasePage
 
 class FeedPage(BasePage):
     # Локаторы
-    header = (By.XPATH, '//*[@id="root"]/div/main/div/h1')
-    feed_section = (By.XPATH, '//*[@id="root"]/div/main/div')
-    first_order = (By.XPATH, '//*[@id="root"]/div/main/div/div/ul/li[1]')
-    details_section = (By.XPATH, '//*[@id="root"]/div/section[2]')
-    order_number_details_screen = (By.XPATH, '//*[@id="root"]/div/section[2]/div[1]/div/p[1]')
-    order_number_first = (By.XPATH, '//*[@id="root"]/div/main/div/div/ul/li[1]/a/div[1]/p[1]')
-    count_all_orders = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/div[2]/p[2]')
-    count_today_orders = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/div[3]/p[2]')
-    order_number_in_work = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/div[1]/ul[2]/li')
-    list_items = (By.XPATH, '//*[@id="root"]/div/main/div/div/ul/li')
+    header = (By.XPATH, '//h1[contains(@class, "text_type_main-large") and contains(text(), "Лента заказов")]')
+    # feed_section = (By.XPATH, '//*[@id="root"]/div/main/div')
+    first_order = (By.XPATH, '//ul[contains(@class, "OrderFeed_list")]/li[1]')
+    details_section = (By.XPATH, '(//section[contains(@class, "Modal_modal")])[2]')
+    order_number_details_screen = (By.XPATH, '//section[2]/div[1]/div/p[1]')
+    order_number_first = (By.XPATH, '//main//ul//li[1]//a//div[1]//p[@class="text text_type_digits-default"]')
+    count_all_orders = (By.XPATH, '//main//p[@class="OrderFeed_number__2MbrQ text text_type_digits-large"]')
+    count_today_orders = (By.XPATH, '//main//div//div//div//div[3]//p[@class="OrderFeed_number__2MbrQ text text_type_digits-large"]')
+    order_number_in_work = (By.XPATH, '//ul[contains(@class, "OrderFeed_orderListReady")]//li[contains(@class, "text_type_digits-default")]')
+    list_items = (By.XPATH, '//div/main/div/div/ul/li[1]')
     text_in_list = (By.XPATH, './a/div[1]/p[1]')
-
-    def login(self, username, password):
-        """Логин в систему"""
-        self.send_keys(self.email_field_login_page, username)
-        self.send_keys(self.password_field_login_page, password)
-        self.click(self.login_button_login_page)
+    ul_locator = (By.XPATH, '//div/main/div/div/ul[contains(@class, "OrderFeed_list")]')
