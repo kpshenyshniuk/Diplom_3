@@ -4919,3 +4919,256 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
 1742497191381	Marionette	INFO	Stopped listening on port 63832
+1742502139829	geckodriver	INFO	Listening on 127.0.0.1:55740
+1742502140342	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofilePRTiZL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502140921	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502141238	Marionette	INFO	Listening on port 55760
+WebDriver BiDi listening on ws://127.0.0.1:55741
+1742502141373	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:22:21.536 firefox[15133:327403] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:22:21.536 firefox[15133:327403] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+1742502146910	Marionette	INFO	Stopped listening on port 55760
+1742502153557	geckodriver	INFO	Listening on 127.0.0.1:55943
+1742502154071	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileyc62Eg"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502154368	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502154683	Marionette	INFO	Listening on port 55955
+WebDriver BiDi listening on ws://127.0.0.1:55944
+1742502154876	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:22:34.978 firefox[15189:328263] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:22:34.978 firefox[15189:328263] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+1742502162111	Marionette	INFO	Stopped listening on port 55955
+1742502173708	geckodriver	INFO	Listening on 127.0.0.1:56207
+1742502174222	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofile9RCBNh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502174522	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502174836	Marionette	INFO	Listening on port 56219
+WebDriver BiDi listening on ws://127.0.0.1:56208
+1742502175019	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:22:55.111 firefox[15244:329146] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:22:55.111 firefox[15244:329146] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 182: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+1742502180514	Marionette	INFO	Stopped listening on port 56219
+1742502185184	geckodriver	INFO	Listening on 127.0.0.1:56379
+1742502185702	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofilexoPs1d"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502185996	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502186315	Marionette	INFO	Listening on port 56387
+WebDriver BiDi listening on ws://127.0.0.1:56380
+1742502186506	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:23:06.607 firefox[15299:329946] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:23:06.607 firefox[15299:329946] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1742502189621	Marionette	INFO	Stopped listening on port 56387
+1742502196713	geckodriver	INFO	Listening on 127.0.0.1:56557
+1742502197232	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofilecRBczS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502197538	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502197848	Marionette	INFO	Listening on port 56569
+WebDriver BiDi listening on ws://127.0.0.1:56558
+1742502198032	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:23:18.127 firefox[15354:330674] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:23:18.127 firefox[15354:330674] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1742502202952	Marionette	INFO	Stopped listening on port 56569
+1742502208887	geckodriver	INFO	Listening on 127.0.0.1:56737
+1742502209398	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileb4zCX0"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502209718	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502210035	Marionette	INFO	Listening on port 56749
+WebDriver BiDi listening on ws://127.0.0.1:56738
+1742502210162	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:23:30.311 firefox[15411:331474] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:23:30.311 firefox[15411:331474] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1742502214912	Marionette	INFO	Stopped listening on port 56749
+1742502220368	geckodriver	INFO	Listening on 127.0.0.1:56915
+1742502220887	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofile6bAdaA"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502221180	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502221492	Marionette	INFO	Listening on port 56923
+WebDriver BiDi listening on ws://127.0.0.1:56916
+1742502221683	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:23:41.778 firefox[15461:332246] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:23:41.778 firefox[15461:332246] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1742502226835	Marionette	INFO	Stopped listening on port 56923
+1742502232246	geckodriver	INFO	Listening on 127.0.0.1:57091
+1742502232761	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofile8f7wS4"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502233052	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502233371	Marionette	INFO	Listening on port 57103
+WebDriver BiDi listening on ws://127.0.0.1:57092
+1742502233562	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:23:53.662 firefox[15514:332999] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:23:53.662 firefox[15514:332999] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1742502237653	Marionette	INFO	Stopped listening on port 57103
+1742502250558	geckodriver	INFO	Listening on 127.0.0.1:57347
+1742502251073	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofile1ARMqN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502251371	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502251687	Marionette	INFO	Listening on port 57359
+WebDriver BiDi listening on ws://127.0.0.1:57348
+1742502251878	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:24:11.978 firefox[15576:333917] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:24:11.979 firefox[15576:333917] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+1742502259132	Marionette	INFO	Stopped listening on port 57359
+1742502269640	geckodriver	INFO	Listening on 127.0.0.1:57603
+1742502270147	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileO97hPO"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502270473	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502270791	Marionette	INFO	Listening on port 57615
+WebDriver BiDi listening on ws://127.0.0.1:57604
+1742502270921	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:24:31.107 firefox[15635:334828] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:24:31.107 firefox[15635:334828] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+1742502280299	Marionette	INFO	Stopped listening on port 57615
+1742502292390	geckodriver	INFO	Listening on 127.0.0.1:57883
+1742502292907	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofile4hYPyC"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502293233	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502293536	Marionette	INFO	Listening on port 57895
+WebDriver BiDi listening on ws://127.0.0.1:57884
+1742502293667	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:24:53.856 firefox[15691:335785] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:24:53.856 firefox[15691:335785] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+1742502304969	Marionette	INFO	Stopped listening on port 57895
+1742502320314	geckodriver	INFO	Listening on 127.0.0.1:58191
+1742502320826	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofile7rAt0A"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502321452	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502321778	Marionette	INFO	Listening on port 58211
+WebDriver BiDi listening on ws://127.0.0.1:58192
+1742502321912	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:25:22.092 firefox[15757:336849] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:25:22.092 firefox[15757:336849] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+1742502333994	Marionette	INFO	Stopped listening on port 58211
+1742502348643	geckodriver	INFO	Listening on 127.0.0.1:58536
+1742502349156	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileb695nE"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502349519	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502349811	Marionette	INFO	Listening on port 58552
+WebDriver BiDi listening on ws://127.0.0.1:58537
+1742502349942	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:25:50.102 firefox[15819:337935] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:25:50.102 firefox[15819:337935] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+1742502362308	Marionette	INFO	Stopped listening on port 58552
+1742502378395	geckodriver	INFO	Listening on 127.0.0.1:58880
+1742502378908	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileU6rU5Y"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502379487	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502379789	Marionette	INFO	Listening on port 58900
+WebDriver BiDi listening on ws://127.0.0.1:58881
+1742502379920	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:26:20.102 firefox[15885:339023] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:26:20.102 firefox[15885:339023] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+1742502390652	Marionette	INFO	Stopped listening on port 58900
+1742502395895	geckodriver	INFO	Listening on 127.0.0.1:59096
+1742502396412	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofilelYvMwV"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502396706	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502397025	Marionette	INFO	Listening on port 59104
+WebDriver BiDi listening on ws://127.0.0.1:59097
+1742502397215	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:26:37.315 firefox[15941:339924] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:26:37.315 firefox[15941:339924] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+1742502400602	Marionette	INFO	Stopped listening on port 59104
+1742502407415	geckodriver	INFO	Listening on 127.0.0.1:59238
+1742502407932	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileETJrQ1"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502408233	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502408545	Marionette	INFO	Listening on port 59250
+WebDriver BiDi listening on ws://127.0.0.1:59239
+1742502408738	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:26:48.844 firefox[15994:340643] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:26:48.844 firefox[15994:340643] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+1742502412900	Marionette	INFO	Stopped listening on port 59250
+1742502419108	geckodriver	INFO	Listening on 127.0.0.1:59386
+1742502419621	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8f/v010_bb157z170r_rrl03rkc0000gn/T/rust_mozprofileAtipzc"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742502419956	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742502420252	Marionette	INFO	Listening on port 59398
+WebDriver BiDi listening on ws://127.0.0.1:59387
+1742502420412	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2025-03-20 21:27:00.547 firefox[16048:341427] +[IMKClient subclass]: chose IMKClient_Modern
+2025-03-20 21:27:00.547 firefox[16048:341427] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: undefined
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://stellarburgers.nomoreparties.site."
+1742502425185	Marionette	INFO	Stopped listening on port 59398
