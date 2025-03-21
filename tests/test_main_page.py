@@ -11,42 +11,39 @@ class TestMainPage:
     @allure.title("Тест нажатие на кнопку Конструктор")
     def test_click_on_constructor_button(self, driver):
         main_page = MainPage(driver)
-        main_page.open(Links.feed_page)
-        url_before = driver.current_url
-        button = main_page.wait_clickable(main_page.button_constructor)
-        main_page.script_click(button)
-        main_page.wait_visible(main_page.title_main_page)
-        url_after = driver.current_url
+        main_page.open_main_page()
+        url_before = main_page.get_current_url()
+        main_page.click_button_constructor()
+        main_page.wait_visibility_title()
+        url_after = main_page.get_current_url()
 
         assert url_after == Links.base_url
         assert url_before != url_after
-        assert main_page.find_element(main_page.title_main_page) is not None
+        assert main_page.find_title_main_page()
 
     @allure.title("Тест нажатие на кнопку Лента заказов")
     def test_click_on_feed_button(self, driver):
         main_page = MainPage(driver)
         feed_page = FeedPage(driver)
-        main_page.open(Links.base_url)
-        url_before = driver.current_url
-        button = main_page.wait_clickable(main_page.button_feed)
-        button.click()
-        main_page.wait_visible(feed_page.header)
-        url_after = driver.current_url
+        main_page.open_main_page()
+        url_before = main_page.get_current_url()
+        main_page.click_button_feed()
+        feed_page.wait_visible_header()
+        url_after = main_page.get_current_url()
 
         assert url_after == Links.feed_page
         assert url_before != url_after
-        assert main_page.find_element(feed_page.header) is not None
+        assert feed_page.find_header_main_page()
 
     @allure.title("Тест нажатие на ингредиент")
     def test_click_on_ingredient(self, driver):
         main_page = MainPage(driver)
-        main_page.open(Links.base_url)
-        indegridient_name = main_page.find_element(main_page.first_indegridient_name).text
-        button = main_page.wait_clickable(main_page.div_first_bread_in_bread_section)
-        button.click()
-        main_page.wait_text_in_element_class(main_page.text_opened, main_page.ingredient_detail_section)
-        element = main_page.find_element(main_page.ingredient_detail_header)
-        indegridient_name_on_details = main_page.find_element(main_page.indegridient_name_details).text
+        main_page.open_main_page()
+        indegridient_name = main_page.get_first_ingredient_name_text()
+        main_page.click_div_first_bread_in_bread_section()
+        main_page.wait_text_in_ingredient_detail_section()
+        element = main_page.find_ingredient_detail_header()
+        indegridient_name_on_details = main_page.get_ingredient_name_details_text()
 
         assert element.is_displayed()
         assert indegridient_name == indegridient_name_on_details

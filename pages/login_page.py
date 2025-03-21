@@ -3,6 +3,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from pages.base_page import BasePage
+from urls import Links
 
 
 class LoginPage(BasePage):
@@ -22,3 +23,15 @@ class LoginPage(BasePage):
         WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable(self.login_button_login_page))
         self.click(self.login_button_login_page)
+
+    def open_login_page(self):
+        self.open(Links.link_login_page)
+
+    def wait_login_page_present(self):
+        self.wait_present(self.login_button_login_page)
+
+    def is_login_page_opened(self):
+        return self.get_current_url() == Links.link_login_page
+
+    def find_login_button(self):
+        return self.find_elements(self.login_button_login_page)

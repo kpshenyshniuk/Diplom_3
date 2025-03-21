@@ -9,7 +9,7 @@ class BasePage:
     text_opened = 'opened'
     account_link_active = "Account_link_active"
     modal_opened = "Modal_modal_opened"
-    input_status_active = 'input_status_active'
+    input_status_active = 'active'
 
     def __init__(self, driver):
         self.driver = driver
@@ -104,3 +104,8 @@ class BasePage:
     @allure.step("Делаем клик через java")
     def script_click(self, locator):
         self.driver.execute_script("arguments[0].click();", locator)
+
+    def get_current_url(self):
+        return self.driver.current_url
+
+

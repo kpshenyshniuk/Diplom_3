@@ -4,6 +4,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from data import Text
 from pages.base_page import BasePage
+from urls import Links
 
 
 class MainPage(BasePage):
@@ -19,20 +20,20 @@ class MainPage(BasePage):
     div_with_ingredients_and_scroll = (
         By.XPATH, '//div[contains(@class, "BurgerIngredients_ingredients__menuContainer__Xu3Mo")]')
     div_first_bread_in_bread_section = (By.XPATH, '//h2[text()="Булки"]/following-sibling::ul[1]/a[1]')
-    div_drag_and_drop_constructor = (By.XPATH, '//ul//li[1]//div//span//span[contains(@class, "constructor-element__text")]')
-    button_close_popup = (By.XPATH, '//section//div[1]//button[contains(@class, "Modal_modal__close_modified")]')
-    button_feed = (By.XPATH, '//header//nav//ul//li//a[@href="/feed"]')
+    div_drag_and_drop_constructor = (By.XPATH, '//div//span//span[contains(@class, "constructor-element__text")]')
+    button_close_popup = (By.XPATH, '//div//button[contains(@class, "Modal_modal__close_modified")]')
+    button_feed = (By.XPATH, '//a[@href="/feed"]')
     ingredient_detail_section = (By.XPATH, '//section[contains(@class, "Modal_modal_opened")]')
-    ingredient_detail_header = (By.XPATH, '//section[1]//div[1]//div//h2[text()="Детали ингредиента"]')
-    first_indegridient_name = (By.XPATH, '//ul[1]//a[1]//p[contains(@class, "BurgerIngredient_ingredient__text")]')
-    close_details_section_button = (By.XPATH, '//section[1]//div[1]//button[contains(@class, "Modal_modal__close_modified")]')
-    counter_of_first_bread = (By.XPATH, '//ul[1]//a[1]//div//p[contains(@class, "counter_counter__num")]')
+    ingredient_detail_header = (By.XPATH, '//h2[text()="Детали ингредиента"]')
+    first_indegridient_name = (By.XPATH, '//p[contains(@class, "BurgerIngredient_ingredient__text") and text()="Флюоресцентная булка R2-D3"]')
+    close_details_section_button = (By.XPATH, '//div[contains(@class, "Modal_modal__contentBox__sCy8X pt-10 pb-15")]/following-sibling::button[contains(@class, "Modal_modal__close_modified")]')
+    counter_of_first_bread = (By.XPATH, '//p[text()="Флюоресцентная булка R2-D3"]/preceding::p[contains(@class, "counter_counter__num")]')
     overlay_make_order = (By.XPATH, '(//div[contains(@class, "Modal_modal")])[1]')
-    ordered_details_screen = (By.XPATH, '//*[@id="root"]/div/section')
+    ordered_details_screen = (By.XPATH, '//div/section')
     new_order_number = (By.XPATH, '//div//h2[contains(@class, "Modal_modal__title_shadow")]')
     new_order_text = (By.XPATH, '//div//p[text()="Ваш заказ начали готовить"]')
-    indegridient_name_details = (By.XPATH, '//section[1]//div//p[contains(@class, "text text_type_main-medium")]')
-    profile_button = (By.XPATH, '//header//nav//a[@href="/account"]')
+    indegridient_name_details = (By.XPATH, '//p[@class="text text_type_main-medium mb-8" and text()="Флюоресцентная булка R2-D3"]')
+    profile_button = (By.XPATH, '//a[@href="/account"]')
     overlay = (By.XPATH, "//*[contains(@class, 'Modal_modal_overlay')]")
 
     @allure.step("Переносим первый элемент из раздела Булки в конструктор заказа")
@@ -77,3 +78,47 @@ class MainPage(BasePage):
             lambda d: "opened" in self.driver.find_element(*self.ordered_details_screen).get_attribute("class"))
         WebDriverWait(self.driver, 20).until(
             lambda d: len(d.find_element(*self.new_order_number).text) == 6)
+
+
+    def wait_visible_make_order_button(self):
+        self.wait_visible(self.make_order_button)
+
+
+    def click_button_constructor(self):
+        element = self.wait_clickable(self.button_constructor)
+        self.script_click(element)
+
+    def click_button_feed(self):
+        element = self.wait_clickable(self.button_feed)
+        self.script_click(element)
+
+    def click_div_first_bread_in_bread_section(self):
+        element = self.wait_clickable(self.div_first_bread_in_bread_section)
+        self.script_click(element)
+
+
+    def wait_visibility_title(self):
+        self.wait_visible(self.title_main_page)
+
+
+    def find_title_main_page(self):
+        return self.find_elements(self.title_main_page)
+
+    def find_ingredient_detail_header(self):
+        return self.find_elements(self.ingredient_detail_header)
+
+    def open_main_page(self):
+        self.open(Links.base_url)
+
+    def get_first_ingredient_name_text(self):
+        return self.find_element(self.first_indegridient_name).text
+
+    def get_ingredient_name_details_text(self):
+        return self.find_element(self.indegridient_name_details).text
+
+    def wait_text_in_ingredient_detail_section(self):
+        self.wait_text_in_element_class(self.account_link_active, self.ingredient_detail_section)
+
+
+
+
