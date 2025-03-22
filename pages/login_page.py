@@ -1,7 +1,5 @@
 import allure
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 from pages.base_page import BasePage
 from urls import Links
 
@@ -20,18 +18,22 @@ class LoginPage(BasePage):
         """Логин в систему"""
         self.send_keys(self.email_field_login_page, username)
         self.send_keys(self.password_field_login_page, password)
-        WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable(self.login_button_login_page))
+        self.wait_clickable(self.login_button_login_page)
         self.click(self.login_button_login_page)
 
+    @allure.step("открываем страницу Логина ")
     def open_login_page(self):
         self.open(Links.link_login_page)
 
+    @allure.step("Ожидаем присутствие кнопки 'Войти' ")
     def wait_login_page_present(self):
         self.wait_present(self.login_button_login_page)
 
-    def is_login_page_opened(self):
-        return self.get_current_url() == Links.link_login_page
-
+    @allure.step("находим кнопку 'Войти' ")
     def find_login_button(self):
         return self.find_elements(self.login_button_login_page)
+
+    @allure.step("Нажимаем на кнопку Восстановить пароль")
+    def click_button_restore_password(self):
+        element = self.wait_clickable(self.button_restore_password)
+        self.script_click(element)

@@ -85,27 +85,49 @@ class BasePage:
         WebDriverWait(self.driver, 10).until(
             lambda d: text not in self.driver.find_element(*locator).get_attribute("class"))
 
+    def wait_len_element(self, locator, length = 6):
+        WebDriverWait(self.driver, 20).until(
+            lambda d: len(d.find_element(*locator).text) == length)
+
     @allure.step("Ожидаем пока появиться текст в элементе")
     def wait_text_in_element_(self, text, locator):
         WebDriverWait(self.driver, 10).until(
             lambda d: text in self.driver.find_element(*locator).text.strip())
 
-    @allure.step("Ожидаем пока увелится счетчик на 1")
-    def wait_count_increase(self, locator, count_before):
-        WebDriverWait(self.driver, 10).until(
-            lambda d: int(self.driver.find_element(*locator).text) == int(count_before) + 1)
-
     @allure.step("Ожидаем пока номер заказа появиться в истории заказов")
     def wait_order_number_in_element(self, order_number, locator):
         WebDriverWait(self.driver, 10).until(lambda driver: any(
-            order_number in item.text for item in self.driver.find_elements(*locator)),
-                                        message=f"Ошибка: номер заказа {order_number} не найден в ленте заказов!")
+            order_number in item.text for item in self.driver.find_elements(*locator)))
 
     @allure.step("Делаем клик через java")
     def script_click(self, locator):
         self.driver.execute_script("arguments[0].click();", locator)
 
+    @allure.step("возвращает нынешнюю url")
     def get_current_url(self):
         return self.driver.current_url
 
+    @allure.step("Ожидаем пока счетчик заказов увелится на 1")
+    def wait_count_increase(self, locator,  count_before):
+        WebDriverWait(self.driver, 10).until(
+            lambda d: int(self.driver.find_element(*locator).text) == int(count_before) + 1)
 
+
+    def execute_script(self, source, target):
+        js_code = """
+                    function simulateDragDrop(sourceNode, destinationNode) {
+                        var event = document.createEvent('HTMLEvents');
+                        event.initEvent('dragstart', true, true);
+                        sourceNode.dispatchEvent(event);
+
+                        event = document.createEvent('HTMLEvents');
+                        event.initEvent('drop', true, true);
+                        destinationNode.dispatchEvent(event);
+
+                        event = document.createEvent('HTMLEvents');
+                        event.initEvent('dragend', true, true);
+                        sourceNode.dispatchEvent(event);
+                    }
+                    simulateDragDrop(arguments[0], arguments[1]);
+                """
+        self.driver.execute_script(js_code, source, target)

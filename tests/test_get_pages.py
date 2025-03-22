@@ -23,7 +23,7 @@ class TestGetPages:
         email_field_value = profile_page.get_class_email_field()
 
         assert email_field_value == user_data['user']['email']
-        assert profile_page.is_profile_page_opened()
+        assert profile_page.get_current_url() == Links.full_link_profile_page
 
     @allure.title("Тест перехода на страницу История заказов")
     def test_get_order_history_page(self, driver, create_user):
@@ -39,7 +39,7 @@ class TestGetPages:
         profile_page.click_on_button_order_history()
         profile_page.wait_text_in_button_order_history()
 
-        assert order_page.is_order_history_page_opened()
+        assert order_page.get_current_url() == Links.order_history_link
 
     @allure.title("Тест нажатие на кнопку Выйти")
     def test_click_on_logout_button(self, driver, create_user):
@@ -54,5 +54,5 @@ class TestGetPages:
         profile_page.click_on_exit_button()
         login_page.wait_login_page_present()
 
-        assert login_page.is_login_page_opened()
+        assert login_page.get_current_url() == Links.link_login_page
         assert login_page.find_login_button()

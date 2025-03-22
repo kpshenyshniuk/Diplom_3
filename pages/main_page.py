@@ -1,7 +1,5 @@
 import allure
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from data import Text
 from pages.base_page import BasePage
 from urls import Links
@@ -37,88 +35,128 @@ class MainPage(BasePage):
     overlay = (By.XPATH, "//*[contains(@class, 'Modal_modal_overlay')]")
 
     @allure.step("Переносим первый элемент из раздела Булки в конструктор заказа")
-    def drag_and_drop_js(self, source, target):
-        js_code = """
-            function simulateDragDrop(sourceNode, destinationNode) {
-                var event = document.createEvent('HTMLEvents');
-                event.initEvent('dragstart', true, true);
-                sourceNode.dispatchEvent(event);
-
-                event = document.createEvent('HTMLEvents');
-                event.initEvent('drop', true, true);
-                destinationNode.dispatchEvent(event);
-
-                event = document.createEvent('HTMLEvents');
-                event.initEvent('dragend', true, true);
-                sourceNode.dispatchEvent(event);
-            }
-            simulateDragDrop(arguments[0], arguments[1]);
-        """
-        self.driver.execute_script(js_code, source, target)
+    def drag_and_drop_js(self, source = None, target= None):
+        self.wait_visible(self.div_first_bread_in_bread_section)
+        self.wait_visible(self.div_drag_and_drop_constructor)
+        source = self.find_element(*self.div_first_bread_in_bread_section)
+        target = self.find_element(*self.div_drag_and_drop_constructor)
+        self.execute_script(source, target)
+        # js_code = """
+        #     function simulateDragDrop(sourceNode, destinationNode) {
+        #         var event = document.createEvent('HTMLEvents');
+        #         event.initEvent('dragstart', true, true);
+        #         sourceNode.dispatchEvent(event);
+        #
+        #         event = document.createEvent('HTMLEvents');
+        #         event.initEvent('drop', true, true);
+        #         destinationNode.dispatchEvent(event);
+        #
+        #         event = document.createEvent('HTMLEvents');
+        #         event.initEvent('dragend', true, true);
+        #         sourceNode.dispatchEvent(event);
+        #     }
+        #     simulateDragDrop(arguments[0], arguments[1]);
+        # """
+        # self.driver.execute_script(js_code, source, target)
+        self.wait_text_present(self.div_drag_and_drop_constructor, Text.name_first_indegridient)
 
     @allure.step("Делаем заказ")
     def make_order(self):
-        WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH, '//h2[text()="Булки"]/following-sibling::ul[1]//a[1]')))
-        WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH, '//*[@id="root"]/div/main/section[2]/ul/li[1]/div/span/span[1]')))
-        source = self.driver.find_element(*self.div_first_bread_in_bread_section)
-        target = self.driver.find_element(*self.div_drag_and_drop_constructor)
+        self.wait_visible(self.div_first_bread_in_bread_section)
+        self.wait_visible(self.div_drag_and_drop_constructor)
+        source = self.find_element(*self.div_first_bread_in_bread_section)
+        target = self.find_element(*self.div_drag_and_drop_constructor)
         self.drag_and_drop_js(source, target)
+        self.wait_text_present(self.div_drag_and_drop_constructor, Text.name_first_indegridient)
+        button = self.wait_clickable(self.make_order_button)
+        self.script_click(button)
+        self.wait_text_not_in_element_class(self.text_opened, self.overlay_make_order)
+        self.wait_text_in_element_class(self.text_opened, self.ordered_details_screen)
+        self.wait_len_element(self.new_order_number)
 
-        WebDriverWait(self.driver, 10).until(
-            EC.text_to_be_present_in_element(self.div_drag_and_drop_constructor, Text.name_first_indegridient))
-
-        button = WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable(self.make_order_button))
-        self.driver.execute_script("arguments[0].click();", button)
-        WebDriverWait(self.driver, 10).until(
-            lambda d: "opened" not in self.driver.find_element(*self.overlay_make_order).get_attribute("class"))
-        WebDriverWait(self.driver, 10).until(
-            lambda d: "opened" in self.driver.find_element(*self.ordered_details_screen).get_attribute("class"))
-        WebDriverWait(self.driver, 20).until(
-            lambda d: len(d.find_element(*self.new_order_number).text) == 6)
-
-
+    @allure.step("Ожидаем видимости кнопки Оформить заказ")
     def wait_visible_make_order_button(self):
         self.wait_visible(self.make_order_button)
 
-
+    @allure.step("Делаим клик на кнопку Конструктор")
     def click_button_constructor(self):
         element = self.wait_clickable(self.button_constructor)
         self.script_click(element)
 
+    @allure.step("Делаим клик на кнопку Лента заканов")
     def click_button_feed(self):
+        self.wait_clickable(self.button_feed)
         element = self.wait_clickable(self.button_feed)
         self.script_click(element)
 
+    @allure.step("Делаим клик на на первый ингредиент в разделе Булки")
     def click_div_first_bread_in_bread_section(self):
         element = self.wait_clickable(self.div_first_bread_in_bread_section)
         self.script_click(element)
 
-
+    @allure.step("Ожидаем видимости заголовка Соберите бургер")
     def wait_visibility_title(self):
         self.wait_visible(self.title_main_page)
 
-
+    @allure.step("Находим заголовок Соберите бургер")
     def find_title_main_page(self):
         return self.find_elements(self.title_main_page)
 
+    @allure.step("Находим заголовок Детали ингредиента в всплывающем окне деталях ингредиента")
     def find_ingredient_detail_header(self):
-        return self.find_elements(self.ingredient_detail_header)
+        return self.find_element(self.ingredient_detail_header)
 
+    @allure.step("открываем главную страницу")
     def open_main_page(self):
         self.open(Links.base_url)
 
+    @allure.step("возвращаем текст первого ингредиента")
     def get_first_ingredient_name_text(self):
         return self.find_element(self.first_indegridient_name).text
 
+    @allure.step("возвращаем текст первого ингредиента на всплывающем окне деталей ингредиента")
     def get_ingredient_name_details_text(self):
         return self.find_element(self.indegridient_name_details).text
 
+    @allure.step("ожидаем появление теста opened в элемента Деталей ингредиента")
     def wait_text_in_ingredient_detail_section(self):
-        self.wait_text_in_element_class(self.account_link_active, self.ingredient_detail_section)
+        self.wait_text_in_element_class(self.text_opened, self.ingredient_detail_section)
 
+    @allure.step("нажимаем на кнопку закрытия всплывающего окна деталей ингредиента")
+    def click_close_details_section_button(self):
+        element = self.wait_clickable(self.close_details_section_button)
+        self.script_click(element)
 
+    @allure.step("ожидаем пока перестанет быть видимым заголовок деталей ингредиента")
+    def wait_invisible_ingredient_detail_header(self):
+        self.wait_invisible(self.ingredient_detail_header)
 
+    @allure.step("возвращаем количество добавленных в конструктор элементов")
+    def get_counter_of_first_bread_text(self):
+        return self.find_element(self.counter_of_first_bread).text
 
+    @allure.step("делаем клик на кнопку Оформить заказ")
+    def click_make_order_button(self):
+        element = self.wait_clickable(self.make_order_button)
+        self.script_click(element)
+
+    @allure.step("возвращаем номер нового заказа")
+    def get_new_order_number_text(self):
+        self.wait_visible(self.new_order_number)
+        return self.find_element(self.new_order_number).text
+
+    @allure.step("Делаем клик на кнопку закрытия окна с новым закказом")
+    def click_button_close_popup(self):
+        self.wait_clickable(self.button_close_popup)
+        element = self.wait_clickable(self.button_close_popup)
+        self.script_click(element)
+
+    @allure.step("Делаем клик на кнопку профиля пользователя")
+    def click_profile_button(self):
+        self.wait_clickable(self.profile_button)
+        element = self.wait_clickable(self.profile_button)
+        self.script_click(element)
+
+    @allure.step("возвращаем текст из покна с новым заказом")
+    def get_text_in_new_order_text(self):
+        return self.find_element(self.new_order_text).text
