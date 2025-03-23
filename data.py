@@ -1,0 +1,17 @@
+import random
+import string
+
+
+class CommonData:
+    random_name = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(random.randint(6, 10))).capitalize()
+    password = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(random.randint(6, 10))).capitalize()
+    invalid_password = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for _ in range(random.randint(1, 5))).capitalize()
+    first_name = ''.join(random.choices(string.ascii_lowercase, k=5))  # 5 случайных букв для имени
+    last_name = ''.join(random.choices(string.ascii_lowercase, k=7))  # 7 случайных букв для фамилии
+    domain = random.choice(["yandex.ru", "gmail.com", "mail.ru"])  # Случайный домен из списка
+    random_email = f"{first_name}@{domain}"
+
+
+class Text:
+    new_order_text = 'Ваш заказ начали готовить'
+    name_first_indegridient = "Флюоресцентная булка R2-D3 (верх)"
