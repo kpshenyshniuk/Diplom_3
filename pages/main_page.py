@@ -38,36 +38,14 @@ class MainPage(BasePage):
     def drag_and_drop_js(self, source = None, target= None):
         self.wait_visible(self.div_first_bread_in_bread_section)
         self.wait_visible(self.div_drag_and_drop_constructor)
-        source = self.find_element(*self.div_first_bread_in_bread_section)
-        target = self.find_element(*self.div_drag_and_drop_constructor)
+        source = self.find_element(self.div_first_bread_in_bread_section)
+        target = self.find_element(self.div_drag_and_drop_constructor)
         self.execute_script(source, target)
-        # js_code = """
-        #     function simulateDragDrop(sourceNode, destinationNode) {
-        #         var event = document.createEvent('HTMLEvents');
-        #         event.initEvent('dragstart', true, true);
-        #         sourceNode.dispatchEvent(event);
-        #
-        #         event = document.createEvent('HTMLEvents');
-        #         event.initEvent('drop', true, true);
-        #         destinationNode.dispatchEvent(event);
-        #
-        #         event = document.createEvent('HTMLEvents');
-        #         event.initEvent('dragend', true, true);
-        #         sourceNode.dispatchEvent(event);
-        #     }
-        #     simulateDragDrop(arguments[0], arguments[1]);
-        # """
-        # self.driver.execute_script(js_code, source, target)
         self.wait_text_present(self.div_drag_and_drop_constructor, Text.name_first_indegridient)
 
     @allure.step("Делаем заказ")
     def make_order(self):
-        self.wait_visible(self.div_first_bread_in_bread_section)
-        self.wait_visible(self.div_drag_and_drop_constructor)
-        source = self.find_element(*self.div_first_bread_in_bread_section)
-        target = self.find_element(*self.div_drag_and_drop_constructor)
-        self.drag_and_drop_js(source, target)
-        self.wait_text_present(self.div_drag_and_drop_constructor, Text.name_first_indegridient)
+        self.drag_and_drop_js()
         button = self.wait_clickable(self.make_order_button)
         self.script_click(button)
         self.wait_text_not_in_element_class(self.text_opened, self.overlay_make_order)

@@ -21,7 +21,7 @@ class ProfilePage(BasePage):
 
     @allure.step("возвращаем имя класса поля email")
     def get_class_email_field(self):
-        return self.find_element(self.email_field_profile_page).get_attribute('value')
+        return self.get_element_value(self.email_field_profile_page)
 
     @allure.step("ожидаем текст Account_link_active в элементе ")
     def wait_text_in_button_order_history(self):

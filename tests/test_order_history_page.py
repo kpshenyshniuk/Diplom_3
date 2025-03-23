@@ -1,15 +1,10 @@
-import time
-
 import allure
-from selenium.webdriver.common.by import By
-
 from conftest import driver
 from pages.feed_page import FeedPage
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
 from pages.order_history_page import OrderHistoryPage
 from pages.profile_page import ProfilePage
-from urls import Links
 
 
 class TestOrderHistoryPage:

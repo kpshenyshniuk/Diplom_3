@@ -41,7 +41,7 @@ class ResetPasswordPage(BasePage):
 
     @allure.step("Возвращаем имя класса поля ввода нового пароля Password")
     def get_new_password_field_reset_password_page_class(self):
-        return self.find_element(self.new_password_field_reset_password_page).get_attribute("class")
+        return self.get_element_class(self.new_password_field_reset_password_page)
 
     @allure.step("делаем клик на кнопка отобразить/скрыть пароль")
     def click_on_show_hide_new_password_icon_reset_password_page(self):

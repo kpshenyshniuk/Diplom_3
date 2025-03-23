@@ -27,6 +27,15 @@ class BasePage:
         """Ищет элемент на странице"""
         return self.wait.until(EC.presence_of_element_located(locator))
 
+    @allure.step("Возвразаем класс элемента")
+    def get_element_class(self, locator):
+        """Ищет элемент на странице"""
+        return self.wait.until(EC.presence_of_element_located(locator)).get_attribute("class")
+
+    @allure.step("Возвращаем атрибут value элемента")
+    def get_element_value(self, locator):
+        return self.wait.until(EC.presence_of_element_located(locator)).get_attribute('value')
+
     @allure.step("Находим указанные элементы")
     def find_elements(self, locator):
         """Ищет список элементов на странице"""
@@ -111,7 +120,6 @@ class BasePage:
     def wait_count_increase(self, locator,  count_before):
         WebDriverWait(self.driver, 10).until(
             lambda d: int(self.driver.find_element(*locator).text) == int(count_before) + 1)
-
 
     def execute_script(self, source, target):
         js_code = """
